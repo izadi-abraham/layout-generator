@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
+
+  function sm() {
+    return(
+      <div className="sm col-6"></div>
+    );
+
+  }
+
+  function l() {
+    return(
+      <div className="l col-12"></div>
+    );
+
+  }
+
+  function xl() {
+    return(
+      <div className="xl col-12"></div>
+    );
+
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+
+      <div className="container-fluid row main">
+        {sm()}
+        {l()}
+        {xl()}
+      </div>
+
+    </React.Fragment>
   );
 }
 
