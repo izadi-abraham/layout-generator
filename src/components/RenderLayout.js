@@ -3,14 +3,15 @@ import React from "react";
 function RenderLayout (props) {
 
     const regNumber = /\d+/g;
-    const text = "4sm/xl/2l";
+    let text = props.selectedValue.toLowerCase();
     const textArray = text.split("/");
     let renderContent = "";
+    let slotNumber = 1;
 
+    const renderSM = () => `<div class='sm col-6'><h1>Slot ${slotNumber}</h1></div>`;
+    const renderL = () => `<div class='l col-12'><h1>Slot ${slotNumber}</h1></div>`;
+    const renderXL = () => `<div class='xl col-12'><h1>Slot ${slotNumber}</h1></div>`;
 
-    const renderSM = () => "<div class='sm col-6'></div>";
-    const renderL = () => "<div class='l col-12'></div>";
-    const renderXL = () => "<div class='xl col-12'></div>";
 
     for (let item of textArray) {
       let switchItem = item.replace(regNumber, '');
@@ -21,16 +22,19 @@ function RenderLayout (props) {
         case 'sm':
           for (let j = 0; j < itemNumber; j++) {
             renderContent += renderSM();
+            slotNumber +=1;
           }
           break;
         case 'l':
           for (let j = 0; j < itemNumber; j++) {
             renderContent += renderL();
+            slotNumber +=1;
           }
           break;
         case 'xl':
           for (let j = 0; j < itemNumber; j++) {
             renderContent += renderXL();
+            slotNumber +=1;
           }
           break;
         default:

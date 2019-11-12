@@ -5,12 +5,16 @@ function DropDownList(props) {
     <div className="row">
       <div className="col">
         <label>
-          Pick your favorite flavor:
-          <select onChange={props.handleChange}>
-            <option value="xl/2l">xl/2l</option>
-            <option value="4sm/xl/2l">4sm/xl/2l</option>
-            <option value="l/4sm/xl">l/4sm/xl</option>
-            <option value="2sm/l/4xl">2sm/l/4xl</option>
+          Please select the Layout Generator's value:
+          <select name="drop down list" defaultValue="none" onChange={props.handleChange}>
+            <option value="none" disabled hidden>-</option>
+            <option value="xl">XL</option>
+            <option value="2XL">2XL</option>
+            <option value="4L">4L</option>
+            <option value="XL/2L">XL/2L</option>
+            <option value="XL/L/2SM">XL/L/2SM</option>
+            <option value="4SM/L/2XL">4SM/L/2XL</option>
+            <option value="SM/XL/L/3SM">4SM/L/2XL</option>
           </select>
         </label>
       </div>

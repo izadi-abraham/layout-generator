@@ -8,27 +8,22 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      selectedValue: ''
+      selectedValue: '',
     };
   }
 
-   handleChange = async (selectedValue) => {
+   handleChange = (selectedValue) => {
 
     console.log("change:", selectedValue.target.value);
-    await this.setState({selectedValue: selectedValue.target.value});
-    console.log(this.state.selectedValue);
+    this.setState({selectedValue: selectedValue.target.value});
 
   };
 
   render() {
     return (
       <div className="container-fluid">
-        <DropDownList
-          handleChange={this.handleChange}
-          selectedValue={this.state.selectedValue}
-        />
-        <RenderLayout selectedValue={this.state.selectedValue}/>
-      </div>
+        <DropDownList handleChange={this.handleChange}/>
+        <RenderLayout selectedValue={this.state.selectedValue}/></div>
     );
   }
 }
