@@ -1,16 +1,14 @@
-#root {
 
-  .main {
 
-     div {
-      border: 1px dashed;
-      height: 6.25rem;
-
-      &.xl {
-        height: 12.5rem;
-      }
+.row {
+  > div[class*=col-] {
+    border: 1px dashed;
+    height: 6.25rem;
+    &.xl {
+      height: 12.5rem;
     }
-
   }
 }
+
+
 

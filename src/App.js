@@ -3,74 +3,63 @@ import './App.scss';
 
 function App() {
 
-  function renderLayout() {
-
-    const text = "2sm/4l/xl";
-    let textArray = text.split("/");
+  const renderLayout = () => {
+    const regNumber = /\d+/g;
+    const text = "4sm/xl/2l";
+    const textArray = text.split("/");
     let renderContent = "";
-    let numberOfRenderContent = text.match(/\d+/g).map(item => parseInt(item,10));
 
-    console.log(numberOfRenderContent);
+    for (let item of textArray) {
+      let switchItem = item.replace(regNumber, '');
+      let itemNumber = parseInt(item, 10);
+      if (isNaN(itemNumber)) itemNumber = 1;
 
-    for (let i = 0; i < textArray.length; i++) {
-      // console.log(textArray[i]);
-
-
-
-      switch (textArray[i]) {
+      switch (switchItem) {
         case 'sm':
-          renderContent += "<div className=\"sm col-6\"></div>";
+          for (let j = 0; j < itemNumber; j++) {
+            renderContent += renderSM();
+          }
           break;
         case 'l':
-          renderContent += "<div className=\"l col-12\"></div>";
+          for (let j = 0; j < itemNumber; j++) {
+            renderContent += renderL();
+          }
           break;
         case 'xl':
-          renderContent += "<div className=\"xl col-12\"></div>";
+          for (let j = 0; j < itemNumber; j++) {
+            renderContent += renderXL();
+          }
           break;
         default:
-          console.log('default case');
-
       }
     }
-    return <div className="container-fluid main" dangerouslySetInnerHTML={createMarkup(renderContent)}/>;
+    return <div className="row" dangerouslySetInnerHTML={{__html: renderContent}}/>;
+  };
 
-
-
-  }
-
-  function createMarkup(stringInput) {
-    return {__html: stringInput};
-  }
-
-  function sm() {
-    return (
-      <div className="sm col-6"></div>
-    );
-
-  }
-
-  function l() {
-    return (
-      <div className="l col-12"></div>
-    );
-
-  }
-
-  function xl() {
-    return (
-      <div className="xl col-12"></div>
-    );
-
-  }
-
+  const renderSM = () => "<div class='sm col-6'></div>";
+  const renderL = () => "<div class='l col-12'></div>";
+  const renderXL = () => "<div class='xl col-12'></div>";
+  const handleChange = (e) => {
+    console.log("change:",e.target.value);
+  };
 
   return (
-
-    <div className="container-fluid row">
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col">
+          <label>
+            Pick your favorite flavor:
+            <select onChange={handleChange}>
+              <option value="xl/2l">xl/2l</option>
+              <option value="4sm/xl/2l">4sm/xl/2l</option>
+              <option value="l/4sm/xl">l/4sm/xl</option>
+              <option value="2sm/l/4xl">2sm/l/4xl</option>
+            </select>
+          </label>
+        </div>
+      </div>
       {renderLayout()}
     </div>
-
-
   );
 }
 
