@@ -1,7 +1,6 @@
 import React from 'react';
 import RenderLayout from './components/RenderLayout';
 import DropDownList from './components/DropDownList';
-import './App.scss';
 
 class App extends React.Component {
   constructor(props) {

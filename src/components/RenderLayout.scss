@@ -1,0 +1,12 @@
+.main {
+  > div[class*=col-] {
+    border: 1px dashed;
+    height: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.xl {
+      height: 12.5rem;
+    }
+  }
+}

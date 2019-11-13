@@ -1,4 +1,5 @@
 import React from "react";
+import './RenderLayout.scss';
 
 function RenderLayout (props) {
 
@@ -8,9 +9,9 @@ function RenderLayout (props) {
     let renderContent = "";
     let slotNumber = 1;
 
-    const renderSM = () => `<div class='sm col-6'><h1>Slot ${slotNumber}</h1></div>`;
-    const renderL = () => `<div class='l col-12'><h1>Slot ${slotNumber}</h1></div>`;
-    const renderXL = () => `<div class='xl col-12'><h1>Slot ${slotNumber}</h1></div>`;
+    const renderSM = () => `<div class='sm col-6'><h3>Slot ${slotNumber}</h3></div>`;
+    const renderL = () => `<div class='l col-12'><h3>Slot ${slotNumber}</h3></div>`;
+    const renderXL = () => `<div class='xl col-12'><h3>Slot ${slotNumber}</h3></div>`;
 
 
     for (let item of textArray) {
@@ -43,7 +44,7 @@ function RenderLayout (props) {
 
 
 
-    return <div className="row" dangerouslySetInnerHTML={{__html: renderContent}}/>;
+    return <div className="row main" dangerouslySetInnerHTML={{__html: renderContent}}/>;
 
 
 }
