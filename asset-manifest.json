@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/izadi-abraham/layout-generator.git/static/css/main.2a96c512.chunk.css",
-    "main.js": "/izadi-abraham/layout-generator.git/static/js/main.93f48a9c.chunk.js",
-    "main.js.map": "/izadi-abraham/layout-generator.git/static/js/main.93f48a9c.chunk.js.map",
-    "runtime-main.js": "/izadi-abraham/layout-generator.git/static/js/runtime-main.76655102.js",
-    "runtime-main.js.map": "/izadi-abraham/layout-generator.git/static/js/runtime-main.76655102.js.map",
-    "static/css/2.0624914a.chunk.css": "/izadi-abraham/layout-generator.git/static/css/2.0624914a.chunk.css",
-    "static/js/2.2c9e7973.chunk.js": "/izadi-abraham/layout-generator.git/static/js/2.2c9e7973.chunk.js",
-    "static/js/2.2c9e7973.chunk.js.map": "/izadi-abraham/layout-generator.git/static/js/2.2c9e7973.chunk.js.map",
-    "index.html": "/izadi-abraham/layout-generator.git/index.html",
-    "precache-manifest.a35c0c931c8af64ac964f8271a4479b6.js": "/izadi-abraham/layout-generator.git/precache-manifest.a35c0c931c8af64ac964f8271a4479b6.js",
-    "service-worker.js": "/izadi-abraham/layout-generator.git/service-worker.js",
-    "static/css/2.0624914a.chunk.css.map": "/izadi-abraham/layout-generator.git/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.2a96c512.chunk.css.map": "/izadi-abraham/layout-generator.git/static/css/main.2a96c512.chunk.css.map"
+    "main.css": "/layout-generator/static/css/main.2a96c512.chunk.css",
+    "main.js": "/layout-generator/static/js/main.3c7db728.chunk.js",
+    "main.js.map": "/layout-generator/static/js/main.3c7db728.chunk.js.map",
+    "runtime-main.js": "/layout-generator/static/js/runtime-main.6c8b698e.js",
+    "runtime-main.js.map": "/layout-generator/static/js/runtime-main.6c8b698e.js.map",
+    "static/css/2.0624914a.chunk.css": "/layout-generator/static/css/2.0624914a.chunk.css",
+    "static/js/2.2c9e7973.chunk.js": "/layout-generator/static/js/2.2c9e7973.chunk.js",
+    "static/js/2.2c9e7973.chunk.js.map": "/layout-generator/static/js/2.2c9e7973.chunk.js.map",
+    "index.html": "/layout-generator/index.html",
+    "precache-manifest.f068fe5fb7629c2fad5d109db62a8dd1.js": "/layout-generator/precache-manifest.f068fe5fb7629c2fad5d109db62a8dd1.js",
+    "service-worker.js": "/layout-generator/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/layout-generator/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.2a96c512.chunk.css.map": "/layout-generator/static/css/main.2a96c512.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.76655102.js",
+    "static/js/runtime-main.6c8b698e.js",
     "static/css/2.0624914a.chunk.css",
     "static/js/2.2c9e7973.chunk.js",
     "static/css/main.2a96c512.chunk.css",
-    "static/js/main.93f48a9c.chunk.js"
+    "static/js/main.3c7db728.chunk.js"
   ]
 }
